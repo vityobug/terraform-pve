@@ -68,13 +68,13 @@ export TF_VAR_PVE_USERNAME="your-username"
 export TF_VAR_PVE_PASSWORD="your-password"
 ```
 
-4. Initialize Terraform
+### 4. Initialize Terraform
 Run the following command to initialize Terraform and download the required providers:
 ```bash
 terraform init
 ```
 
-5. Review the Configuration
+### 5. Review the Configuration
 Modify the following variables in the resources.tf file as needed:
 
 `datastore_id`: The name of your Proxmox datastore (e.g., truenas or local-zfs).
@@ -82,14 +82,14 @@ Modify the following variables in the resources.tf file as needed:
 `username`: The username for the VM user account.
 `ip_config`: Update the IP addresses and gateway if necessary.
 
-6. Apply the Configuration
+### 6. Apply the Configuration
 Run the following command to create the VMs:
 ```bash
 terraform apply
 ```
 Terraform will display a plan of the resources to be created. Confirm by typing `yes`.
 
-7. Destroy the Resources
+### 7. Destroy the Resources
 To tear down the cluster and delete the VMs, run:
 ```bash
 terraform destroy
