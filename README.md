@@ -103,11 +103,12 @@ The following variables are defined in variables.tf:
 `PVE_PASSWORD`: The password for authenticating with the Proxmox cluster.
 
 These variables are sensitive and should be set using environment variables.
+
 **Resources**
 The following resources are created:
 
-`proxmox_virtual_environment_download_file`: Downloads the Ubuntu Cloud Image.
-`proxmox_virtual_environment_vm`: Creates the master and worker VMs.
+* `proxmox_virtual_environment_download_file`: Downloads the Ubuntu Cloud Image.
+* `proxmox_virtual_environment_vm`: Creates the master and worker VMs.
 
 ---
 
