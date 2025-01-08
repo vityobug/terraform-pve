@@ -53,7 +53,14 @@ git clone https://github.com/vityobug/terraform-pve-k8s.git
 cd terraform-pve
 ```
 
-### 2. Set Environment Variables
+### 2. Add your public SSH key
+Copy the public SSH key for passwordless authentication.
+```bash
+cp ~/.ssh/id_rsa.pub ./files/
+```
+
+
+### 3. Set Environment Variables
 Set the following environment variables to authenticate with your Proxmox server:
 ```bash
 export TF_VAR_PVE_URL="https://your-proxmox-server:8006"
@@ -61,13 +68,13 @@ export TF_VAR_PVE_USERNAME="your-username"
 export TF_VAR_PVE_PASSWORD="your-password"
 ```
 
-3. Initialize Terraform
+4. Initialize Terraform
 Run the following command to initialize Terraform and download the required providers:
 ```bash
 terraform init
 ```
 
-4. Review the Configuration
+5. Review the Configuration
 Modify the following variables in the resources.tf file as needed:
 
 `datastore_id`: The name of your Proxmox datastore (e.g., truenas or local-zfs).
@@ -75,20 +82,20 @@ Modify the following variables in the resources.tf file as needed:
 `username`: The username for the VM user account.
 `ip_config`: Update the IP addresses and gateway if necessary.
 
-5. Apply the Configuration
+6. Apply the Configuration
 Run the following command to create the VMs:
 ```bash
 terraform apply
 ```
 Terraform will display a plan of the resources to be created. Confirm by typing `yes`.
 
-6. Destroy the Resources
+7. Destroy the Resources
 To tear down the cluster and delete the VMs, run:
 ```bash
 terraform destroy
 ```
 
-Configuration
+## Configuration
 Variables
 The following variables are defined in variables.tf:
 `PVE_URL`: The full URL to the Proxmox cluster (e.g., https://your-proxmox-server:8006).
