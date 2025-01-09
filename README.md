@@ -1,4 +1,5 @@
 # Proxmox Kubernetes Cluster Setup
+Preparation for Ansible as a second step
 
 This repository contains Terraform code to provision a Kubernetes cluster on a Proxmox Virtual Environment (PVE). The setup includes one master node and three worker nodes, each configured with Ubuntu Cloud Images. I personally use this to quickly setup a k8s cluster, but the deployment is not limited to that.
 And I know the code can be optimized, but this is intended for a small environment and this way it's easier to read.
