@@ -6,7 +6,7 @@ variable "PVE_URL" {
 variable "PVE_PASSWORD" {
   type        = string
   sensitive   = true
-  description = "Proxmox Password. Specify using the TV_VAR_PVE_PASSWORD environment variable!"
+  description = "Proxmox Password. Specify using the TF_VAR_PVE_PASSWORD environment variable!"
 }
 
 variable "PVE_USERNAME" {
